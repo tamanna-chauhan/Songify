@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hobbies page</title>
+    <style type="text/css">
+        
+        body{
+        
+        }
+        
+    </style>
+    <script type="text/javascript">
+                         $('.welcome-screen button').on('click', function() {
+                                var name = $('#name-input').val();
+                                if (name.length>2) {
+                                    var message = "Welcome, " + name;
+                                    $('.main .user-name').text(message);
+                                    $('.welcome-screen').addClass('hidden');
+                                    $('.main').removeClass('hidden');
+                                } else {
+                                    $('#name-input').addClass('error');
+                                }
+                            });
+
+    </script>
+</head>
+<body>
+    <div>
+        <h1>MY HOBBIES</h1>
+        <div class="input-wrapper">
+          <input type="name" placeholder="your name" id="name-input" style="border-radius:10px; border:2px solid white; padding:5px;">
+           <button style="border-radius:10px; border:2px solid white; padding:5px;"> Go </button> 
+        </div>
+    </div>
+
+</body>
+</html>
